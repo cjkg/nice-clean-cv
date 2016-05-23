@@ -1,0 +1,223 @@
+% nice-clean-resume v. 1.0
+% This is a simple resume template I made for myself
+% (c) 2016 Christopher Gibilisco
+
+% This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+% To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
+%Declares the class and sets the font at 11pt, and the paper size to letter
+\documentclass[11pt]{article}
+%Sets fonts to Libertine
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+%formatting
+\usepackage{titlesec}
+ \titleformat{\section}
+ {\normalfont\scshape\Large\sf}{\thesection}{1em}{}
+ \titlespacing*{\section}
+{0pt}{.08in}{.15in}
+%sets margins
+\usepackage[hmargin=1in,vmargin=1in]{geometry}
+%list stuff
+\usepackage{mdwlist}
+\usepackage{enumitem}
+%keeps LaTeX from indenting new paragraphs
+\setlength{\parindent}{0in}
+%hyperlinks/color
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0.0,0.0,.5}
+\usepackage{hyperref}
+  \hypersetup{colorlinks,breaklinks,
+              linkcolor=darkblue,urlcolor=darkblue,
+              anchorcolor=darkblue,citecolor=darkblue}
+              
+\begin{document}
+
+\begin{center}
+%put your name here
+{\LARGE Jane/John Doe}
+\end{center}
+
+%creates the nice horizontal line between your name and your contact info
+\hrule
+
+\vspace{.1in}
+
+%contact info (\hfill moves everything to the right of it snugly against the right margin)
+1300 Oldbuilding Hall \hfill \href{https://www.mywebsite.edu}{mywebsite.edu} \\
+Fancy University   \hfill \href{mailto:myemail@wherever.com}{myemail@wherever.com}\\
+City, State ZIP \hfill (939) 555 1283
+
+\vspace{2pc}
+
+\section*{Education}
+
+\begin{description}[
+  itemsep=-.3em,
+  leftmargin=\dimexpr\leftmargini+1em\relax,
+  labelindent=-1em,
+  listparindent=-1em,
+  itemindent=-1em
+]
+\item \textsc{university of whatever}\\
+PhD, Computer Science, May 2016.
+\item \textsc{university of wherever}\\
+BA, Computer Science, May 2010.
+\end{description}
+
+\section*{AOS}
+\begin{description}[
+  itemsep=0pc,
+  leftmargin=\dimexpr\leftmargini+1em\relax,
+  labelindent=-1em,
+  listparindent=-1em,
+  itemindent=-1em
+]
+ %areas of specialization
+\item Specialty 1, Specialty 2.
+\end{description}
+
+\section*{AOC}
+\begin{description}[
+  itemsep=-.4em,
+  leftmargin=\dimexpr\leftmargini+1em\relax,
+  labelindent=-1em,
+  listparindent=-1em,
+  itemindent=-1em
+]
+%areas of competence
+\item Competence 1, Competence 2, Competence 3
+\end{description}
+
+\section*{Publications}
+
+\setlength{\leftskip}{2em}
+
+\vspace{.05in}
+
+\begin{enumerate}[
+  itemsep=-.45em,
+  leftmargin=\dimexpr\leftmargini+1em\relax,
+  labelindent=-1em,
+  listparindent=-1em,
+  itemindent=-1em
+]
+\item ``A very fine article: with an even finer subtitle.''\\
+\emph{Journal of Something} 53 (1): 418--434, 2016.
+\item ``A very fine article: with an even finer subtitle.''\\
+\emph{Journal of Something} 52 (2): 1--26, 2015.
+\item ``A very fine article: with an even finer subtitle.''\\
+\emph{Journal of Something} 51 (1): 33--54, 2014.
+\item ``A very fine article: with an even finer subtitle.''\\
+\emph{Journal of Something} 50 (4): 100--114, 2013.
+\item ``A very fine article: with an even finer subtitle.''\\
+\emph{Journal of Something} 49 (6): 313--319, 2012.
+\item ``A very fine article: with an even finer subtitle.''\\
+\emph{Journal of Something} 46 (3): 20--41, 2011.
+\end{enumerate}
+
+\setlength{\leftskip}{0pt}
+\vspace{.05in}
+
+\section*{Conference Presentations}
+
+\begin{enumerate}[
+  itemsep=-.45em,
+  leftmargin=\dimexpr\leftmargini+1em\relax,
+  labelindent=-1em,
+  listparindent=-1em,
+  itemindent=-1em
+]
+\item ``A bold new idea for further research.''\\
+The $n$th annual meeting of the $x$ society, month, year.
+\item ``A bold new idea for further research.''\\
+The $n$th annual meeting of the $x$ society, month, year.
+\item ``A bold new idea for further research.''\\
+The $n$th annual meeting of the $x$ society, month, year.
+\item ``A bold new idea for further research.''\\
+The $n$th annual meeting of the $x$ society, month, year.
+\item ``A bold new idea for further research.''\\
+The $n$th annual meeting of the $x$ society, month, year.
+\item ``A bold new idea for further research.''\\
+The $n$th annual meeting of the $x$ society, month, year.
+\end{enumerate}
+
+\section*{Research Grants and Awards}
+
+\begin{enumerate}[
+  itemsep=-.4em,
+  leftmargin=\dimexpr\leftmargini+1em\relax,
+  labelindent=-1em,
+  listparindent=-1em,
+  itemindent=-1em
+]
+
+\item Award 1\\
+Awarding organization, year
+\item Award 2\\
+Awarding organization, year
+\item Award 3\\
+Awarding organization, year
+\item Award 4\\
+Awarding organization, year
+\item Award 5\\
+Awarding organization, year
+\item Award 6\\
+Awarding organization, year
+\end{enumerate}
+
+
+\section*{Teaching Experience}
+
+\begin{enumerate}[
+  itemsep=-.5em,
+  leftmargin=\dimexpr\leftmargini+1em\relax,
+  labelindent=-1em,
+  listparindent=-1em,
+  itemindent=-1em
+]
+\item \textbf{CS101}: Fall 2010, Fall 2011, Spring 2013
+\item \textbf{CS150}: Spring 2011, Fall 2012, Fall 2013
+\item \textbf{CS202}: Spring 2014, Fall 2014, Spring 2015
+\item \textbf{CS300}: Fall 2015, Spring 2016 
+\end{enumerate}
+
+\section*{Service}
+
+\begin{enumerate}[
+  itemsep=-.5em,
+  leftmargin=\dimexpr\leftmargini+1em\relax,
+  labelindent=-1em,
+  listparindent=-1em,
+  itemindent=-1em
+]
+\item Committee Chair\\
+Boring Committee, University of X, AY 2015--16
+\item Committee Member\\
+Boring Comittee, University of X, AY 2014--15
+\item Conference Organizer\\
+Awesome Conference, University of Y, December 2016
+\item Referee\\
+\emph{Academic Journal 1}, \emph{Academic Journal 2}, \emph{Academic Journal 3}, \emph{Academic Journal 4}, \emph{Academic Journal 5}, \emph{Academic Journal 6}, \emph{Academic Journal 7} 
+\end{enumerate}
+
+
+\section*{References}
+
+\begin{enumerate}[
+  itemsep=-.5em,
+  leftmargin=\dimexpr\leftmargini+1em\relax,
+  labelindent=-1em,
+  listparindent=-1em,
+  itemindent=-1em
+]
+\item Person1, University Affiliation
+\item Person2, University Affiliation
+\item Person3, University Affiliation
+\item Person4, University Affiliation
+\item Person5, University Affiliation
+\end{enumerate}
+
+\end{document}
+
+
